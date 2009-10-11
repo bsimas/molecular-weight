@@ -1,4 +1,4 @@
-#!/usr/bin/env python2.3
+#!/usr/bin/env python
 #
 #  chemweight.py
 #  
@@ -121,4 +121,4 @@ for element, count in s:
 	count = int(count or '1')
 	compoundweight += mass[element] * count
 print compoundweight
-	
+
