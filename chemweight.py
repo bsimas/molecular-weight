@@ -114,11 +114,17 @@ mass = {
   "Hs":	265,
   "Mt":	266,
 }
-s = re.findall('([A-Z][a-z]?)([0-9]*)', raw_input())
-compoundweight = 0
 
-for element, count in s:
-	count = int(count or '1')
-	compoundweight += mass[element] * count
-print compoundweight
+def calculate_weight(chem):
+	s = re.findall('([A-Z][a-z]?)([0-9]*)', chem)
+	compoundweight = 0
+
+	for element, count in s:
+		count = int(count or '1')
+		compoundweight += mass[element] * count
+	return compoundweight
+
+if __name__ == "__main__":
+	print calculate_weight(raw_input())
+
 
